@@ -1,0 +1,159 @@
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>Письмо</title>
+</head>
+<header>
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100px;
+            background: rgb(66, 34, 207);
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding-top: 5px;
+            padding-left: 90px;
+            text-decoration: none;
+            font-size: 27px;
+        }
+        
+        .navbar b {
+            position: fixed;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        body {
+            padding-top: 100px;
+            background-color: darkred;
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        body p {
+            font-style: italic;
+            font-size: 1.2em;
+            color: ghostwhite;
+            margin: 1rem;
+        }
+        
+        body p a {
+            border: 4px ridge rgb(230, 250, 49);
+            border-radius: 5px;
+        }
+        
+        body p b {
+            padding-left: 100px;
+        }
+        
+        textarea {
+            outline:"color: rgb(230, 250, 49)"
+        }
+    </style>
+
+
+    <div style="color: rgb(230, 250, 49)">
+    </div>
+    <script>
+        function MyFunc() {
+            var name = document.forms["RegForm"]["Name"];
+            var gender = document.forms["RegForm"]["gender"];
+            var opinion = document.forms["RegForm"]["opinion"];
+            var wish1 = document.forms["RegForm"]["wish1"];
+            var wish2 = document.forms["RegForm"]["wish2"];
+            var wish3 = document.forms["RegForm"]["wish3"];
+            var dlc = document.forms["RegForm"]["dlc"];
+
+            if (name.value == "") {
+                window.alert("Fill the field.");
+                name.focus();
+                return false;
+            }
+            if (gender.value == "") {
+                window.alert("Fill the field.");
+                gender.focus();
+                return false;
+            }
+            if (opinion.value == "") {
+                window.alert("Fill the field.");
+                opinion.focus();
+                return false;
+            }
+            if (wish1.value == "") {
+                window.alert("Fill the 1st wish.");
+                wish1.focus();
+                return false;
+            }
+            if (wish2.value == "") {
+                window.alert("Fill the 2nd wish.");
+                wish2.focus();
+                return false;
+            }
+            if (wish3.value == "") {
+                window.alert("Fill the 3rd wish.");
+                wish3.focus();
+                return false;
+            }
+            if (dlc.value == "") {
+                window.alert("Fill the field.");
+                dlc.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</header>
+
+<body>
+    <div class="navbar">
+        <b>
+        <img src="1.jpg"  width="50px" height="50px">
+        </b>
+        <a>
+            <p>This should be some text</p>
+        </a>
+    </div>
+    <form name="RegForm" action="mailto:pl-rf-427@yandex.ru" enctype="text/plain" onsubmit="return MyFunc()" method="POST">
+        <p>Dear Santa,
+            <br><br> &nbsp;&nbsp;&nbsp; My name is:
+            <a><input type="text" size="20" name="Name"></a>
+            <br><br><b> I am a:</b>
+            <input type="radio" name="gender" value="boy">Boy
+            <input type="radio" name="gender" value="girl">Girl
+            <br>
+            <br>This year I have been:
+            <input type="radio" name="opinion" value="good">good
+            <input type="radio" name="opinion" value="very good">Very very good
+            <input type="radio" name="opinion" value="A teeny tiny but not so good">A teeny tiny but not so good
+            <br><br>This year for Christmas I'd like to get:
+            <br><br>a&nbsp;
+            <a><input type="text" size="40" name="wish1"></a>
+            <br><br>a&nbsp;
+            <a><input type="text" size="40" name="wish2"></a>
+            <br><br>and also some&nbsp;
+            <a><input type="text" size="40" name="wish3"></a>
+
+            <br><br><b>And Santa,I also want to tell you:<br></b>
+            <b><textarea style="border:4px ridge rgb(230, 250, 49); border-radius:5px;" name="dlc" cols="40" rows="4"></textarea></b>
+            <br>
+            <b><input style="border:4px ridge rgb(230, 250, 49); border-radius:5px;" type="submit" value="Send it!"></b>
+        </p>
+
+    </form>
+
+
+</body>
+<div class = "navbar">
+<a href ="main1.html">NEW YEAR</a>
+<a href="contact.html">CONTACT</a>
+<a href="gallery.html">GALLERY</a>
+</div>
+</html>
